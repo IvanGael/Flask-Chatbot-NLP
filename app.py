@@ -29,12 +29,28 @@ def home():
 @app.route('/get_response', methods=['POST'])
 def get_response():
     user_input = request.form['message']
-    # Create a Conversation object
+
+    # Use NLTK for tokenization
+    tokens = nltk.word_tokenize(user_input)
+    
+    # Use SpaCy for NER and POS tagging
+    doc = nlp(user_input)
+    entities = [(ent.text, ent.label_) for ent in doc.ents]
+    pos_tags = [(token.text, token.pos_) for token in doc]
+
+    # Create a Conversation object for the transformer model
     conversation = Conversation(user_input)
+    
     # Use transformers to get the chatbot response
     response = chatbot(conversation)
     bot_response = response.generated_responses[0]
-    return jsonify({'response': bot_response})
+
+    return jsonify({
+        'response': bot_response,
+        'tokens': tokens,
+        'entities': entities,
+        'pos_tags': pos_tags
+    })
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -23,6 +23,7 @@
                     method: 'POST',
                     data: { message: userInput },
                     success: function(response) {
+                        console.log(`response : ${JSON.stringify(response)}`)
                         $('#chat-box').append('<div class="user-message">' + userInput + '</div>');
                         $('#chat-box').append('<div class="bot-response">' + response.response + '</div>');
                         $('#user-input').val('');
