@@ -2,6 +2,8 @@
 
 This project is a simple chatbot web application built using Python, Flask, and various NLP libraries such as NLTK, SpaCy, and transformers. The chatbot uses the Huggingface `transformers` library with the `microsoft/DialoGPT-medium` model to generate responses to user inputs.
 
+![Demo](demo.png)
+
 ## Table of Contents
 
 - [Installation](#installation)
