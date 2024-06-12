@@ -6,7 +6,6 @@ This project is a simple chatbot web application built using Python, Flask, and 
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [Examples](#examples)
 - [License](#license)
@@ -41,22 +40,6 @@ This project is a simple chatbot web application built using Python, Flask, and 
     ```
 
 3. **Interact with the chatbot by typing messages and clicking 'Send'.**
-
-## Project Structure
-/
-│
-├── app.py
-├── requirements.txt
-├── templates/
-│ └── index.html
-└── static/
-└── styles.css
-
-
-- `app.py`: The main Flask application file.
-- `requirements.txt`: Lists the dependencies required for the project.
-- `templates/index.html`: The HTML template for the web interface.
-- `static/styles.css`: The CSS file for styling the web interface.
 
 ## How It Works
 
