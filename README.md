@@ -1,24 +1,15 @@
-# Flask Chatbot using NLP Libraries
+# Flask Chatbot
 
 This project is a simple chatbot web app built using Python, Flask, and various NLP libraries such as NLTK, SpaCy, and transformers. The chatbot uses the Huggingface `transformers` library with the `microsoft/DialoGPT-medium` model to generate responses to user inputs. It also uses NLTK and SpaCy for additional text processing.
 
-
 ![Demo](demo.png)
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [How It Works](#how-it-works)
-- [Examples](#examples)
-- [License](#license)
 
 ## Installation
 
 1. **Install the required dependencies:**
 
     ```
-    pip install flask nltk spacy transformers
+    pip install -r requirements.txt
     python -m spacy download en_core_web_sm
     ```
 
@@ -30,19 +21,9 @@ This project is a simple chatbot web app built using Python, Flask, and various 
 
 ## Usage
 
-1. **Run the Flask application:**
-
-    ```
-    py app.py
-    ```
-
-2. **Open your web browser and navigate to:**
-
-    ```
-    http://127.0.0.1:5000/
-    ```
-
-3. **Interact with the chatbot by typing messages and clicking 'Send'.**
+```
+py app.py
+```
 
 ## How It Works
 
@@ -52,8 +33,6 @@ This project is a simple chatbot web app built using Python, Flask, and various 
     - **NLTK**: Used for tokenizing the input message.
     - **SpaCy**: Used for named entity recognition (NER) and part-of-speech (POS) tagging.
     - **Transformers**: The chatbot uses the Huggingface `transformers` library with the `microsoft/DialoGPT-medium` model to generate responses to user inputs.
-
-3. **Frontend**: The web interface uses HTML and jQuery to handle user interactions and display the conversation.
 
 ## Examples
 
@@ -65,9 +44,6 @@ Here are some example messages you can try with the chatbot:
 - "I like cats."
 - "What's the meaning of life?"
 
-## License
-
-This project is licensed under the MIT License. 
 
 
 

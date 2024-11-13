@@ -1,7 +1,3 @@
-# pip install flask nltk spacy transformers
-# python -m spacy download en_core_web_sm
-
-
 from flask import Flask, render_template, request, jsonify
 import nltk
 import spacy
